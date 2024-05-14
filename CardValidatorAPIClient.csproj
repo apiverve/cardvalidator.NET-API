@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.CardValidator</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/cardvalidator</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>Card Validator is a simple tool for validating if a card number is valid or not. It checks the card number format and the Luhn algorithm to see if the card number is valid.</Description>
+    <RepositoryUrl>https://github.com/apiverve/cardvalidator-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>card validator; card validator api; card validator tool; card validator software; card validator service; card validator library; card validator sdk; card validator code; card validator script; card validator program; card validator application; card validator app; card validator utility; card validator helper; card validator helper tool; card validator helper software; card validator helper service; card validator helper library; card validator helper sdk; card validator helper code; card validator helper script; card validator helper program; card validator helper application; card validator helper app; card validator helper tool; card validator helper utility; card validator helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
