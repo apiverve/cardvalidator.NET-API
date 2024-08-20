@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new cardvalidatorQueryOptions {
+var queryOptions = new CardValidatorQueryOptions {
   number = "4900264223817524"
 };
 ```
@@ -118,7 +118,8 @@ if(response.error != null) {
     },
     "cardNumber": "4900264223817524",
     "isValid": true
-  }
+  },
+  "code": 200
 }
 ```
 
