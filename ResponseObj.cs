@@ -4,68 +4,73 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class code
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+    /// <summary>
+    /// Code data
+    /// </summary>
+    public class Code
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-    [JsonProperty("size")]
-    public int size { get; set; }
+        [JsonProperty("size")]
+        public int Size { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Card data
+    /// </summary>
+    public class Card
+    {
+        [JsonProperty("niceType")]
+        public string NiceType { get; set; }
 
-public class card
-{
-    [JsonProperty("niceType")]
-    public string niceType { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-    [JsonProperty("type")]
-    public string type { get; set; }
+        [JsonProperty("patterns")]
+        public int[] Patterns { get; set; }
 
-    [JsonProperty("patterns")]
-    public int[] patterns { get; set; }
+        [JsonProperty("gaps")]
+        public int[] Gaps { get; set; }
 
-    [JsonProperty("gaps")]
-    public int[] gaps { get; set; }
+        [JsonProperty("lengths")]
+        public int[] Lengths { get; set; }
 
-    [JsonProperty("lengths")]
-    public int[] lengths { get; set; }
+        [JsonProperty("code")]
+        public Code Code { get; set; }
 
-    [JsonProperty("code")]
-    public code code { get; set; }
+        [JsonProperty("matchStrength")]
+        public int MatchStrength { get; set; }
 
-    [JsonProperty("matchStrength")]
-    public int matchStrength { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("card")]
+        public Card Card { get; set; }
 
-}
+        [JsonProperty("cardNumber")]
+        public string CardNumber { get; set; }
 
-public class data
-{
-    [JsonProperty("card")]
-    public card card { get; set; }
+        [JsonProperty("isValid")]
+        public bool IsValid { get; set; }
 
-    [JsonProperty("cardNumber")]
-    public string cardNumber { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("isValid")]
-    public bool isValid { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-}
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
